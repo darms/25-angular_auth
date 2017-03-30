@@ -1,5 +1,6 @@
 'use strict';
 
+const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -13,7 +14,10 @@ module.exports = {
     new HTMLPlugin({
       template: `${__dirname}/app/index.html`
     }),
-    new ExtractTextPlugin('bundle.css')
+    new ExtractTextPlugin('bundle.css'),
+    new webpack.DefinePlugin({
+      __API_URI__: JSON.stringify(process.env.API_URL)
+    })
   ],
   module: {
     rules: [
