@@ -1,10 +1,16 @@
 'use strict';
 
+const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const production = process.env.NODE_ENV === 'production';
+
+dotenv.load();
+
 module.exports = {
+  devtool: 'eval',
   entry: `${__dirname}/app/entry.js`,
   output: {
     filename: 'bundle.js',
@@ -16,7 +22,8 @@ module.exports = {
     }),
     new ExtractTextPlugin('bundle.css'),
     new webpack.DefinePlugin({
-      __API_URI__: JSON.stringify(process.env.API_URL)
+      __API_URL__: JSON.stringify(process.env.API_URL),
+      __DEBUG__: JSON.stringify(!production)
     })
   ],
   module: {
