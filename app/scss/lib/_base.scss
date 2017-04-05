@@ -73,48 +73,58 @@ label{
   font-size: 95%;
   border: none;
   float: right;
-  margin-right: 2%;
+  margin-right: 5%;
+  margin-top: -10%;
 };
 ///home
 // span{
 //   flex-direction: row;
 // };
-#edit{
+.btn-edit{
   padding: 1% 4%;
   border-radius: 15%;
+  font-size: 95%;
+  border: none;
+  width: 5%;
+  display: inline-block;
+  position: relative;
+  float: right;
+  right: 3%;
+};
+#edit{
+  // padding: 1% 4%;
+  // border-radius: 15%;
   background-color: $brand1;
   color: white;
-  font-size: 95%;
-  border: none;
-  width: 5%;
-  float: right;
-  margin-right: 2%;
-    flex-direction: row;
+  // font-size: 95%;
+  // border: none;
+  // width: 5%;
+  // float: right;
+  // margin-right: 2%;
+  //   flex-direction: row;
 };
 #delete{
-  padding: 1% 4%;
-  border-radius: 15%;
+
   background-color: #c4c9d1;
   color: black;
-  font-size: 95%;
-  border: none;
-  width: 5%;
-  // position: relative;
-  // float: right;
-  display: inline-block;
-  flex-direction: row;
+
   // margin-right: 2%;
 };
 //navbar
+img{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+};
 
 h1{
   color: white;
   font-size: 165%;
-  display: flex;
+  display: inline-block;;
   order: 1;
   position: absolute;
   margin-top: -5%;
-  left: 2%;
+  left: 8%;
 };
 
  #sign{
