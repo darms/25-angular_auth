@@ -1,7 +1,7 @@
 
 
 header{
-  height: 8vw;
+  height: 10vw;
   width: 100%;
   background-color: $brand1;
 };
@@ -40,8 +40,6 @@ a{
   color: black;
 };
 
-
-
 body {
   background-color: $brand2;
   height: 65%;
@@ -49,7 +47,7 @@ body {
 
 footer {
   background-color: $footer;
-  height: 10vw;
+  height: 5vw;
   width: 100%;
   position: fixed;
   bottom: -30px;
@@ -92,29 +90,21 @@ label{
   right: 3%;
 };
 #edit{
-  // padding: 1% 4%;
-  // border-radius: 15%;
   background-color: $brand1;
   color: white;
-  // font-size: 95%;
-  // border: none;
-  // width: 5%;
-  // float: right;
-  // margin-right: 2%;
-  //   flex-direction: row;
+
 };
 #delete{
-
   background-color: #c4c9d1;
   color: black;
 
-  // margin-right: 2%;
 };
+
 //navbar
 img{
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 2%;
+  left: 4%;
 };
 
 h1{
@@ -123,8 +113,9 @@ h1{
   display: inline-block;;
   order: 1;
   position: absolute;
-  margin-top: -5%;
-  left: 8%;
+  margin-top: 3%;
+  // bottom: 3%;
+  left: 9%;
 };
 
  #sign{
@@ -136,7 +127,7 @@ h1{
    position: absolute;
    float: right;
    right: 2%;
-   margin-top: -5%;
+   margin-top: 3%;
  };
 
  //edit gallery
