@@ -48,5 +48,21 @@ describe('Gallery Service', function() {
     });
   });
 
-  // TODO: create another test for deleting a gallery
+describe('galleryService.deleteGallery', () => {
+  it('should delete a gallery', () => {
+    let headers = {
+      Authorization: 'Bearer test token',
+      Accept: 'application/json, text/plain, */*'
+    };
+
+    let galleryID = 'galleryid';
+
+    this.$httpBackend.expectDELETE(`https://slugram-backend.herokuapp.com/api/gallery/${galleryID}`, headers)
+    .respond(204);
+
+    this.galleryService.deleteGallery(galleryID);
+    this.$httpBackend.flush();
+    this.$rootScope.$apply();
+    });
+  });
 });
