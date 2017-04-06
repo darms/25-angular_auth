@@ -1,5 +1,12 @@
 'use strict';
 
+// var angular = require('angular');
+// angular.module('myMod', [
+//   require('angular-animate'),
+//   require('angular-mocks/ngMock'),
+//   require('angular-mocks/ngAnimateMock')
+// ]);
+
 describe('Gallery Service', function() {
 
   beforeEach(() => {
@@ -13,7 +20,7 @@ describe('Gallery Service', function() {
     });
   });
 
-  describe('galleryService.createGallery' () => {
+  describe('galleryService.createGallery', () => {
     it('should create a new gallery', () => {
       let galleryData = {
         name: 'example gallery',
@@ -22,11 +29,11 @@ describe('Gallery Service', function() {
 
       let headers = {
         'Content-Type': 'application/json',
-         Accept: 'application/json',
-         Authorization: 'Bearer Test token'
+        Accept: 'application/json',
+        Authorization: 'Bearer test token'
       };
 
-      this.$httpBackend.expectPOST('http://localhost:8000/api/gallery', galleryData, headers)
+      this.$httpBackend.expectPOST('https://slugram-backend.herokuapp.com/api/gallery', galleryData, headers)
       .respond(200, {
         _id: '1234',
         username: 'testuser',
@@ -41,5 +48,5 @@ describe('Gallery Service', function() {
     });
   });
 
-  create test for deleting a gallery
+  // TODO: create another test for deleting a gallery
 });

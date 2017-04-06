@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports= ['$q', '$log', '$http', '$window', authService];
+module.exports = ['$q', '$log', '$http', '$window', authService];
 
 function authService($q, $log, $http, $window) {
   $log.debug('authService');
@@ -22,13 +22,13 @@ function authService($q, $log, $http, $window) {
 
   service.getToken = function() {
     $log.debug('authService.getToken');
-    if(token) {
+    if (token) {
       return $q.resolve(token);
     };
 
     token = $window.localStorage.getItem('token');
     if (token) return $q.resolve(token);
-      return $q.reject(new Error('token not found'));
+    return $q.reject(new Error('token not found'));
   };
 
   service.signup = function(user) {
@@ -45,7 +45,7 @@ function authService($q, $log, $http, $window) {
     return $http.post(url, user, config)
     .then( res => {
       $log.log('success:', res.data);
-      return setToken(res.data)
+      return setToken(res.data);
     })
     .catch( err => {
       $log.error('failure:', err.message);
@@ -53,7 +53,7 @@ function authService($q, $log, $http, $window) {
     });
   };
 
-  service.logout= function() {
+  service.logout = function() {
     $log.debug('authService.logout');
 
     $window.localStorage.removeItem('token');
@@ -64,7 +64,7 @@ function authService($q, $log, $http, $window) {
   service.login = function(user) {
     $log.debug('authService.login');
 
-    let url= `${__API_URL__}/api/login`;
+    let url = `${__API_URL__}/api/login`;
     let base64 = $window.btoa(`${user.username}:${user.password}`);
     let config = {
       headers: {
@@ -78,12 +78,11 @@ function authService($q, $log, $http, $window) {
       $log.log('success', res.data);
       return setToken(res.data);
     })
-    .catch(err => {
+    .catch( err => {
       $log.error(err.message);
       return $q.reject(err);
     });
   };
 
   return service;
-
 };

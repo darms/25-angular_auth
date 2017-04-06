@@ -15,8 +15,8 @@ describe('Auth Service', function() {
   describe('authService.getToken', () => {
     it('should return a token', () => {
       this.authService.token = null;
-      this.$window.localStorae.setItem('token', 'test token');
-
+      this.$window.localStorage.setItem('token', 'test token');
+      
       this.authService.getToken()
       .then( token => {
         expect(token).toEqual('test token');
