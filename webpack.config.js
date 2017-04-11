@@ -47,7 +47,7 @@ module.exports = {
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack-loader?bypassOnDebug'
         ]
-      },
+      }
     ]
   }
 };
