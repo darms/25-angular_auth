@@ -30,7 +30,6 @@ header{
 a,p{
   display: inline-block;
   float: right;
-  // float: right;
   left: 52%;
   right: 2%;
   color: $brand1;
@@ -47,7 +46,7 @@ body {
 
 footer {
   background-color: $footer;
-  height: 5vw;
+  height: 8vw;
   width: 100%;
   position: fixed;
   bottom: 0%;
@@ -60,9 +59,7 @@ label{
   padding: 2%;
   font-family: helvetica;
 };
-// .item-label{
-//   display: inline-block;
-// };
+
 .btn-std{
   padding: 1% 4%;
   border-radius: 15%;
@@ -74,10 +71,7 @@ label{
   margin-right: 5%;
   margin-top: -10%;
 };
-///home
-// span{
-//   flex-direction: row;
-// };
+
 .btn-edit{
   padding: 1% 4%;
   border-radius: 15%;
@@ -172,3 +166,13 @@ span{
   justify-content: center;
   border-radius: 3%;
 };
+.tooltip.top .tooltip-inner .tooltip{
+    background-color:red;
+}
+//social icons
+// .icon-name {
+// 	background: url('imgs/social-media-icons-15.png') no-repeat 75.12% 6%;
+// 	background-size: 350px 136px;
+// 	width: 37px;
+// 	height: 36px;
+// };
