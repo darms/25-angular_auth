@@ -6,14 +6,16 @@ module.exports = function() {
         template: require('./socialmedia-icons.html'),
         controller: ['$log', SocialIconsController],
         bindToController: true,
-        controlelrAs: 'socialIconsCtrl',
+        controllerAs: 'socialIconsCtrl',
         scope: {
             tester: '@'
         }
     };
 };
 
-function SocialIconsController() {
+function SocialIconsController(icons) {
+    // $log.log(this);
+    // this.gotohell = 'whyohwhy?@!!!!!!!!!!!!!!!!!!!!!!!!!';
     this.icons = [
         {
             name: 'evernote',
