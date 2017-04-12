@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "![cf](https://i.imgur.com/7v5ASc8.png) Lab 25 - Client Side Auth ======",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.5"
+  },
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "webpack -p --progress",
